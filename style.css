@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, rgb(0, 0, 255, 0.7), rgb(238, 130, 238,0.9));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1200px) {
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    /* this is a temp color, looking for something with blue gradient and transition */
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0));
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+#navbar ul {
+    list-style: none;
+    display: inline-flex;
+    position: fixed;
+    right: 0;
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 17px 25px;
+    color: rgb(255, 255, 255);
+    /*need to make this number as equal as possible to stay the same size as the navbar, thick browm*/
+    /*changing this value made the img go crazy*/
+    /* background-color: aqua; **test color, need to fix*/
+}
+
+#navbar a:hover {
+    /* this is a temp color, looking for something with blue gradient and transition */
+    background-color: rgb(185, 185, 185, 0.7);
+    font-weight: bold;
+}
+
+#welcome-section {
+    width: 100%;
+    height: 625px;
+    /* explora colores con gradiente que quiten peso a la carga */
+    /* this is an optional color used for test only
+    background-color: rgb(134, 134, 134); */
+}
+
+h1, h3 {
+    text-align: center;
+    position: relative;
+    top: 300px;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    top: 14px;
+}
+
+#projects {
+    width: 100%;
+    height: auto;
+    text-align: center;;
+    /* test colors
+    background-color: rgb(219, 219, 219); */
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: black;
+}
+/*need to revise how to size them as best as possible*/
+.project-tile img {
+    width: 380px;
+    height: 280px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*a container only for the imgs and img footer is needed to move then around neatly*/
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 30px/*this allows the tiles to stay closer to the center*/
+}
+
+footer {
+    /* background-color: rgb(224, 224, 224); color is for test only*/
+    text-align: center;
+}
+
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-image: linear-gradient(50deg, rgb(238, 130, 238,0.9), rgb(0, 0, 255, 0.7));
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #welcome-section {
+        width: 100%;
+        height: 110vh;
+        /*
+        background-image: linear-gradient(45deg, rgb(0, 0, 255, 0.7), rgb(238, 130, 238,0.9));
+        */
+        /*
+        background-color: rgb(134, 134, 134); 
+        this is an optional color used for test only*/
+    }
+
+    h1, h3 {
+        text-align: center;
+        position: relative;
+        top: 280px;
+    }
+
+    #projects {
+        width: 100%;
+        height: 200vh;
+    }
+
+    .project-tile {
+        width: 86%;
+    }
+
+    .project-tile a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .project-tile a img{
+        width: 92%;
+        height: auto;
+    }
+
+    #projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+
+    #contact p {
+        font-size: 32px;       
+    }
+
+    #contact a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
+
+
+}
